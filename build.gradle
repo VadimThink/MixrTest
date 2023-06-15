@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'tech.mixr'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.glassfish.tyrus:tyrus-client:1.1'
+    implementation 'org.glassfish.tyrus:tyrus-server:1.1'
+    implementation 'org.glassfish.tyrus:tyrus-container-grizzly:1.1'
+    compileOnly 'javax.websocket:javax.websocket-api:1.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
